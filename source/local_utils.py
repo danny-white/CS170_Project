@@ -1,0 +1,49 @@
+import networkx as nx
+import matplotlib.pyplot as plt
+import random, time
+import numpy as np
+from names import *
+from student_utils_sp18 import *
+
+def graph_from_file(infile):
+    lines = []
+    with open(infile) as f:
+        for line in f:
+            lines += [line.strip("\n")]
+    size = int(lines[0])
+    nodes = lines[1].split()
+    source = lines[2]
+    for i in range(len(nodes)):
+        if nodes[i] == source:
+            source_num = i
+
+    mat = []
+    for line in lines[3:]:
+        mat += [line.split(" ")[0:-1]]
+
+    g = adjacency_matrix_to_graph(mat)
+    conquer_costs = [mat[i][i] for i in range(len(mat))]
+
+    for i in range(len(g.nodes)):
+        for j in range(len(g.nodes)):
+            try:
+                if g[i][j]['weight'] == "0":
+                    g.remove_edge(i,j)
+            except:
+                continue
+
+    mapping = dict(zip(range(size), nodes))
+    nx.relabel_nodes(g, mapping, False)
+
+    return g, conquer_costs
+
+def output_to_file(file_name, path, conquered):
+    path_str = " ".join(path)
+    conquered_str = " ".join(conquered)
+
+    with open(file_name, "w") as f:
+        f.write(path_str)
+        f.write("\n")
+        f.write(conquered_str)
+
+
