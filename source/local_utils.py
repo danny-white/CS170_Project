@@ -22,7 +22,11 @@ def graph_from_file(infile):
         mat += [line.replace("\t"," ") .split(" ")]
 
     g = adjacency_matrix_to_graph(mat)
-    conquer_costs = [mat[i][i] for i in range(len(mat))]
+    conquer_costs = {}
+    
+    for i in range(len(mat)):
+        conquer_costs[nodes[i]] = mat[i][i]
+    
 
     for i in range(len(g.nodes)):
         for j in range(len(g.nodes)):

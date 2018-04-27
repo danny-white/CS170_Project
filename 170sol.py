@@ -28,7 +28,6 @@ g, conquer_costs, source = graph_from_file("inputs2/10.in")
 
 
 def min_2d_path(g, source, ignored_nodes):
-
     weights = {}    
     for n in g.neighbors(source):
         if n in ignored_nodes:
@@ -40,11 +39,14 @@ def min_2d_path(g, source, ignored_nodes):
     ret = min(weights, key=weights.get)
     return ret, weights[ret]
 
+def min_neighbor_conquer(g, source, conquer_costs):
+    temp = {}
+    for n in g.neighbors(source):
+        temp[n] = conquer_costs[n]
+    ret = min(conquer_costs, key=conquer_costs.get)
+    return ret, conquer_costs[ret]
+
     
-    # print(n_n)
-
-
-print(min_2d_path(g, source))
 
 # display(nx.minimum_spanning_tree(g))
 
