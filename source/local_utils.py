@@ -17,7 +17,6 @@ def graph_from_file(infile):
             source_num = i
 
     mat = []
-    whiteSpaceRegex = "\\s";
     
     for line in lines[3:]:
         mat += [line.replace("\t"," ") .split(" ")]
@@ -30,6 +29,11 @@ def graph_from_file(infile):
             try:
                 if g[i][j]['weight'] == "0":
                     g.remove_edge(i,j)
+                else:
+                    if ("." in g[i][j]['weight']):
+                        g[i][j]['weight'] = float(g[i][j]['weight'])
+                    else:
+                        g[i][j]['weight'] = int(g[i][j]['weight'])
             except:
                 continue
 
@@ -49,18 +53,13 @@ def output_to_file(file_name, path, conquered):
 
 
 def display(g, source, edge_labels = True):
-    colormap = {}
-    for i in g.edges():
-        if str(i) == source:
-            colormap[i] = "b"
-        else:    
-            colormap[i] = "r"
-
+ 
     plt.figure(figsize=(15,7))
 
     labels = {}
     # for i in g.edges():
-    #     labels[i] = int(g[i[0]][i[1]]['weight'])
+    #     labels[i] = float(g[i[0]][i[1]]['weight'])
+
     pos = nx.spring_layout(g)
     if edge_labels:
         nx.draw_networkx_edge_labels(g,pos,edge_labels=labels)
