@@ -34,7 +34,6 @@ def greedy_min_path(g, source):
 	print(total_cost)
 	print(result_path)
 	return total_cost
-greedy_min_path(g, source)
 
 
 
@@ -56,11 +55,77 @@ greedy_min_path(g, source)
 
 
 
+# start at a node, iterate through all 2 deep paths out from the node, and take the shortest one. 
+# Then Repeat from the end of the path you select in the previous stem
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+
+
+ignored_nodes = []
+def min_2d_path(g, source, ignored_nodes):
+    weights = {}
+    ignored_nodes.append(source)
+    for n in g.neighbors(source):
+
+        if n in ignored_nodes and g.neighbors(n) > 1:
+            continue
+        for nn in g.neighbors(n):
+            if nn in ignored_nodes:
+                continue
+            weights[(source, n, nn)] = g[source][n]['weight'] + g[n][nn]['weight']
+    ret = min(weights, key=weights.get)
+    return ret, ret[2]
+#min_2d_path(g, source, ignored_nodes)
+
+def run(g, source):
+	ignored_nodes = []
+	viewed_nodes = []
+	ret = []
+	sub_path, last_point = min_2d_path(g, source, ignored_nodes)
+	ret.append(sub_path)
+	for i in sub_path:
+		viewed_nodes.append(i)
+		viewed_nodes.extend(g.neighbors(i))
+	print(sub_path)
+	print(last_point)
+	while set(viewed_nodes) != g.nodes:
+		sub_path, last_point = min_2d_path(g, last_point, ignored_nodes)
+		for i in sub_path:
+			viewed_nodes.append(i)
+			viewed_nodes.extend(g.neighbors(i))
+		print(sub_path)
+		print(last_point)
+		print("missing nodes")
+		print(list(set(g.nodes) - set(viewed_nodes)))
+		print(ret)
+		ret.append(sub_path)
+	return ret
+print(run(g, source))
+def min_neighbor_conquer(g, source, conquer_costs):
+    temp = {}
+    for n in g.neighbors(source):
+        temp[n] = conquer_costs[n]
+    ret = min(conquer_costs, key=conquer_costs.get)
+    return ret, conquer_costs[ret]
+
+    
+
+# display(nx.minimum_spanning_tree(g))
+
+
 # TSP = christofides.compute(distance_matrix)
 
 
 # print(source)
-# display(nx.dfs_tree(g, source), source)
+
 
 # print(nx.maximal_independent_set(g, ["Hera"]))
 # display(g, source)
