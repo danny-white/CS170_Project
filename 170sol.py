@@ -31,7 +31,7 @@ def make_path(nodes):
 def has_leaves(g, node):
     # true if any surrounding nodes are leaves
     return any([1 if len(list(nx.neighbors(g,i))) == 1 else 0 for i in nx.neighbors(g,node)])
-@timeout(20)
+@timeout(30)
 def build_tour(g, start):
     start_leaf = -1
     if len(set(g.neighbors(start))) == 1:
@@ -132,7 +132,7 @@ def build_tour(g, start):
 
     # now short_paths is the complete graph, we thus take the smallest edge in it, 
     # verify it doesnt break the 2 vertex / cycle thing and repeat
-@timeout(20)
+@timeout(10)
 def generate_conquering(g, walk):
     conquered = dict(zip(list(g.nodes), [0 for i in g.nodes()]))
     followers = dict(zip(list(g.nodes), [0 for i in g.nodes()]))
@@ -174,7 +174,7 @@ def get_sol(g, path, conq):
     return cost_of_solution(g, path, conq)
 
 # for name in [str(i) for i in range(100)]:
-for name in [str(i) for i in range(a,b)] 
+for name in [str(i) for i in range(0,50)] 
 try: 
     if not (int(name) % 10):
         print(name)
