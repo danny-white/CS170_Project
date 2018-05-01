@@ -1,2 +1,2 @@
-('Adjacency matrix is not square.', 'nx,ny=(50, 51)')
-353
+[Errno 2] No such file or directory: 'inputs2/250.in'
+250

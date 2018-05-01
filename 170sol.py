@@ -5,7 +5,12 @@ import numpy as np
 from source.student_utils_sp18 import *
 from source.local_utils import *
 from source.utils import *
-# import Christofides
+import os.path
+
+
+
+
+
 
 
 import os.path
@@ -106,6 +111,11 @@ notrun = [
 ]
 
 a,b = 350,400
+
+
+
+a,b =700, 800
+
 
 
 # If neither the source nor target are specified return a dictionary 
@@ -272,27 +282,72 @@ def get_sol(g, path, conq):
         g.nodes()[e]['weight'] = float(g.nodes()[e]['weight'])
     return cost_of_solution(g, path, conq)
 
-# for name in [str(i) for i in range(100)]:
 
-for name in [str(i) for i in range(a,b)]:
-    try: 
-        if not (int(name) % 10):
-            print(name)
-        g, conquer_costs, source = graph_from_file("inputs2/" + "50" + ".in")
-        t = build_tour(g, source)
-        clist = generate_conquering(g,t)
-        conq = set([i for i in clist.keys() if clist[i]])
-
-        file = "outputs2/" + name  + ".out"
-        output_to_file(file, t, list(conq))
-
-        # print(get_sol(g, t, conq))
-    except Exception as e:
-        print(e)
-        print(name)
-
-#for name in [str(i) for i in range(a,b)]:
-for name in [str(i) for i in notrun]:
+asdfgh = [267,
+268,
+269,
+273,
+274,
+275,
+276,
+277,
+278,
+279,
+280,
+281,
+283,
+285,
+286,
+287,
+292,
+295,
+301,
+303,
+304,
+305,
+306,
+307,
+308,
+310,
+312,
+313,
+314,
+318,
+319,
+320,
+321,
+322,
+323,
+324,
+325,
+326,
+333,
+334,
+335,
+336,
+337,
+338,
+339,
+340,
+341,
+345,
+346,
+347,
+349,
+351,
+352,
+353,
+355,
+366,
+367,
+375,
+376,
+377,
+382,
+388,
+394,
+]#for name in [str(i) for i in range(a,b)]:
+for name in [str(i) for i in asdfgh]:
     try: 
         print(name)
         g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
@@ -305,5 +360,9 @@ for name in [str(i) for i in notrun]:
 
         # print(get_sol(g, t, conq))
     except Exception as e:
+
         write_to_file("errorlog.txt", str(e) + "\n" + str(name))
 
+
+        print(e)
+        

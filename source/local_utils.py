@@ -18,9 +18,9 @@ def graph_from_file(infile):
             source_num = i
 
     mat = []
-    
+
     for line in lines[3:]:
-        mat += [line.replace("\t"," ") .split(" ")]
+        mat += [line.replace("\t"," ").strip().split(" ")]
 
     g = adjacency_matrix_to_graph(mat)
     conquer_costs = {}
