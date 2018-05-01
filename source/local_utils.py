@@ -22,7 +22,6 @@ def graph_from_file(infile):
     for line in lines[3:]:
         mat += [line.replace("\t"," ").strip().split(" ")]
 
-    print(mat[0])
     g = adjacency_matrix_to_graph(mat)
     conquer_costs = {}
     

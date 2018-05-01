@@ -1,10 +1,17 @@
-('Adjacency matrix is not square.', 'nx,ny=(181, 182)')
-49('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
-6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
-6('Adjacency matrix is not square.', 'nx,ny=(200, 201)')
-7list index out of range
-6list index out of range
-6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
-6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
-6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
-6
+STREAM ioctl timeout
+22STREAM ioctl timeout
+25STREAM ioctl timeout
+28STREAM ioctl timeout
+31STREAM ioctl timeout
+37The node 0  is not in the graph.
+703[Errno 2] No such file or directory: 'inputs2/705.in'
+705[Errno 2] No such file or directory: 'inputs2/706.in'
+706[Errno 2] No such file or directory: 'inputs2/707.in'
+707[Errno 2] No such file or directory: 'inputs2/711.in'
+711[Errno 2] No such file or directory: 'inputs2/712.in'
+712[Errno 2] No such file or directory: 'inputs2/713.in'
+713STREAM ioctl timeout
+652STREAM ioctl timeout
+715The node 1                                                  is not in the graph.
+717STREAM ioctl timeout
+655
