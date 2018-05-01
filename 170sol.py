@@ -13,7 +13,7 @@ for name in [str(i) for i in range(1000)]:
         print("\'" + name + "\'," , end = " ")
 
 
-
+exit()
 a,b = 550, 600
 
 
