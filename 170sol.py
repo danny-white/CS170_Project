@@ -8,13 +8,13 @@ from source.utils import *
 import os.path
 
 
-for name in [str(i) for i in range(1000)]:
-    if not os.path.exists("outputs/" + name + ".out"):
-        print("\'" + name + "\'," , end = " ")
+# for name in [str(i) for i in range(1000)]:
+#     if not os.path.exists("outputs/" + name + ".out"):
+#         print("\'" + name + "\'," , end = " ")
 
 
-exit()
-a,b = 550, 600
+# exit()
+a,b = input("input the beginning of your range (inclusive)"), input("input the end of your range (exclusive)")
 
 
 
@@ -183,22 +183,19 @@ def get_sol(g, path, conq):
     return cost_of_solution(g, path, conq)
 
 
-for name in [str(i) for i in range(a,b)]:
-    try: 
+for name in [str(i) for i in range(int(a),int(b))]:
+    try:
         print(name)
-        g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
+        g, conquer_costs, source = graph_from_file("inputs/" + name + ".in")
         t = build_tour(g, source)
         clist = generate_conquering(g,t)
         conq = set([i for i in clist.keys() if clist[i]])
+        for i in g.nodes():
+            g.nodes()[i]['weight'] = float(g.nodes()[i]['weight'])
+        
 
         file = "outputs2/" + name  + ".out"
         output_to_file(file, t, list(conq))
-
-        # print(get_sol(g, t, conq))
     except Exception as e:
-
         write_to_file("errorlog.txt", str(e) + "\n" + str(name))
-
-
-        print(e)
         
