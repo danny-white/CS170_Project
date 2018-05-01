@@ -3,6 +3,7 @@ import matplotlib.pyplot as plt
 import random, time
 import numpy as np
 from source.student_utils_sp18 import *
+from source.timeout import timeout
 
 def graph_from_file(infile):
     lines = []
@@ -25,7 +26,7 @@ def graph_from_file(infile):
     conquer_costs = {}
     
     for i in range(len(mat)):
-        conquer_costs[nodes[i]] = mat[i][i]
+        conquer_costs[nodes[i]] = float(mat[i][i])
     
 
     for i in range(len(g.nodes)):
@@ -40,7 +41,7 @@ def graph_from_file(infile):
                         g[i][j]['weight'] = int(g[i][j]['weight'])
             except:
                 continue
-
+    g.nodes()[i]['weight'] = float(g.nodes()[i]['weight'])
     mapping = dict(zip(range(size), nodes))
     nx.relabel_nodes(g, mapping, False)
 
@@ -61,8 +62,9 @@ def display(g, source, edge_labels = True):
     plt.figure(figsize=(15,7))
 
     labels = {}
-    # for i in g.edges():
-    #     labels[i] = float(g[i[0]][i[1]]['weight'])
+    if edge_labels:
+        for i in g.edges():
+            labels[i] = float(g[i[0]][i[1]]['weight'])
 
     pos = nx.spring_layout(g)
     if edge_labels:

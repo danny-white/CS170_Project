@@ -5,8 +5,8 @@ import numpy as np
 from source.student_utils_sp18 import *
 from source.local_utils import *
 # import Christofides
-ignored_nodes = []
-g, conquer_costs, source = graph_from_file("inputs2/120.in")
+
+
 
 
 # If neither the source nor target are specified return a dictionary 
@@ -28,6 +28,10 @@ def distance(g, path):
 def make_path(nodes): 
     return list(nodes[1])
 
+def has_leaves(g, node):
+    # true if any surrounding nodes are leaves
+    return any([1 if len(list(nx.neighbors(g,i))) == 1 else 0 for i in nx.neighbors(g,node)])
+@timeout(20)
 def build_tour(g, start):
     start_leaf = -1
     if len(set(g.neighbors(start))) == 1:
@@ -128,71 +132,60 @@ def build_tour(g, start):
 
     # now short_paths is the complete graph, we thus take the smallest edge in it, 
     # verify it doesnt break the 2 vertex / cycle thing and repeat
+@timeout(20)
+def generate_conquering(g, walk):
+    conquered = dict(zip(list(g.nodes), [0 for i in g.nodes()]))
+    followers = dict(zip(list(g.nodes), [0 for i in g.nodes()]))
+    for e in walk:
+        if has_leaves(g, e):
+            conquered[e] = 1
+            followers[e] = 1
+            for node in nx.neighbors(g,e):
+                followers[node] = 1
+    # followers is now a dict of fallen nodes
+    # take the ones that are not fallen, rank them based on the cost function and then conquer the best one and recalc
+    costs = []
+    for i in followers:
+        if not followers[i]:
+            costs.append(i)
 
-print(build_tour(g, source) )
-display(g, source)
+    while not all(followers.values()):
+        # conquer something
+        next_conq = max(costs, key=lambda p: cost(g, p, followers))
+        conquered[next_conq] = 1
+        followers[next_conq] = 1
+        for node in nx.neighbors(g,next_conq):
+            followers[node] = 1
+        # re calculate the costs of every node
+        costs = {}
+        for i in followers:
+            if not followers[i]:
+                costs[i] = cost(g, i, followers)    
+    return conquered
 
-# def greedy_min_path(g, source):
-#     total_cost = float('inf')
-#     start = source
-#     paths = {}
-#     dimensions = len(g.nodes)
-#     for node in g[start]:
-#         dimension_graph = len(g.nodes)
+def cost(g, node, followers):
+    this_cost = conquer_costs[node]
+    neighbor_costs = sum([(conquer_costs[i] + g[node][i]['weight']) if not followers[i] else 0 for i in nx.neighbors(g, node)])
+    return neighbor_costs / this_cost
 
-#         result_path = [start, node]
-#         for node_2 in g[node]:
-#             result_path.append(node_2)
-#             cost = g[start][node]['weight'] + g[node][node_2]['weight']
-#             paths[str(result_path)] = cost
-#         # if curr_cost < total_cost:
-#         #     total_cost = curr_cost
-#     print(total_cost)
-#     print(result_path)
-#     return total_cost 
+def get_sol(g, path, conq):
+    for e in g.nodes():
+        g.nodes()[e]['weight'] = float(g.nodes()[e]['weight'])
+    return cost_of_solution(g, path, conq)
 
-# def min_2d_path(g, source, ignored_nodes):
-#     weights = {}
-#     ignored_nodes.append(source)
-#     for n in g.neighbors(source):
+# for name in [str(i) for i in range(100)]:
+for name in [str(i) for i in range(a,b)] 
+try: 
+    if not (int(name) % 10):
+        print(name)
+    g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
+    t = build_tour(g, source)
+    clist = generate_conquering(g,t)
+    conq = set([i for i in clist.keys() if clist[i]])
 
-#         if n in ignored_nodes and g.neighbors(n) > 1:
-#             continue
-#         for nn in g.neighbors(n):
-#             if nn in ignored_nodes:
-#                 continue
-#             weights[(source, n, nn)] = g[source][n]['weight'] + g[n][nn]['weight']
-#     ret = min(weights, key=weights.get)
-#     return ret, ret[2]
-# #min_2d_path(g, source, ignored_nodes)
+    file = "outputs2/" + name  + ".out"
+    output_to_file(file, t, list(conq))
 
-# def run(g, source):
-# 	ignored_nodes = []
-# 	viewed_nodes = []
-# 	ret = []
-# 	sub_path, last_point = min_2d_path(g, source, ignored_nodes)
-# 	ret.append(sub_path)
-# 	for i in sub_path:
-# 		viewed_nodes.append(i)
-# 		viewed_nodes.extend(g.neighbors(i))
-# 	print(sub_path)
-# 	print(last_point)
-# 	while set(viewed_nodes) != g.nodes:
-# 		sub_path, last_point = min_2d_path(g, last_point, ignored_nodes)
-# 		for i in sub_path:
-# 			viewed_nodes.append(i)
-# 			viewed_nodes.extend(g.neighbors(i))
-# 		print(sub_path)
-# 		print(last_point)
-# 		print("missing nodes")
-# 		print(list(set(g.nodes) - set(viewed_nodes)))
-# 		print(ret)
-# 		ret.append(sub_path)
-# 	return ret
-# # print(run(g, source))
-# def min_neighbor_conquer(g, source, conquer_costs):
-#     temp = {}
-#     for n in g.neighbors(source):
-#         temp[n] = conquer_costs[n]
-#     ret = min(conquer_costs, key=conquer_costs.get)
-#     return ret, conquer_costs[ret]
+    # print(get_sol(g, t, conq))
+except Exception as e:
+    print(e)
