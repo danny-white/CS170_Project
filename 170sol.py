@@ -197,5 +197,5 @@ for name in [str(i) for i in range(int(a),int(b))]:
         file = "outputs2/" + name  + ".out"
         output_to_file(file, t, list(conq))
     except Exception as e:
-        write_to_file("errorlog.txt", str(e) + "\n" + str(name))
+        write_to_file("errorlog.txt", str(e) + "\n" + str(name), True)
         
