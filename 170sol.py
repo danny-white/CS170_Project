@@ -4,9 +4,10 @@ import random, time
 import numpy as np
 from source.student_utils_sp18 import *
 from source.local_utils import *
+from source.utils import *
 # import Christofides
 
-
+a,b = 0,0 
 
 
 # If neither the source nor target are specified return a dictionary 
@@ -174,10 +175,9 @@ def get_sol(g, path, conq):
     return cost_of_solution(g, path, conq)
 
 # for name in [str(i) for i in range(100)]:
-for name in [str(i) for i in range(0,50)]:
+for name in [str(i) for i in range(a,b)]:
     try: 
-        if not (int(name) % 10):
-            print(name)
+        print(name)
         g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
         t = build_tour(g, source)
         clist = generate_conquering(g,t)
@@ -188,4 +188,4 @@ for name in [str(i) for i in range(0,50)]:
 
         # print(get_sol(g, t, conq))
     except Exception as e:
-        print(e)
+        write_to_file("errorlog.txt", str(e) + "\n" + str(name))

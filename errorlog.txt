@@ -1,0 +1,2 @@
+('Adjacency matrix is not square.', 'nx,ny=(50, 51)')
+8
