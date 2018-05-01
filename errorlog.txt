@@ -1,2 +1,10 @@
-('Adjacency matrix is not square.', 'nx,ny=(50, 51)')
-8
+('Adjacency matrix is not square.', 'nx,ny=(181, 182)')
+49('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
+6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
+6('Adjacency matrix is not square.', 'nx,ny=(200, 201)')
+7list index out of range
+6list index out of range
+6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
+6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
+6('Adjacency matrix is not square.', 'nx,ny=(100, 101)')
+6

@@ -5,9 +5,130 @@ import numpy as np
 from source.student_utils_sp18 import *
 from source.local_utils import *
 from source.utils import *
+import os.path
+
 # import Christofides
 
-a,b = 0,0 
+# for name in [str(i) for i in range(200)]:
+#     if not os.path.exists("outputs2/" + name + ".out"):
+#         print(name)
+
+
+
+
+notrun = [
+6,
+7,
+8,
+12,
+13,
+14,
+16,
+22,
+25,
+27,
+28,
+29,
+31,
+36,
+37,
+38,
+39,
+40,
+41,
+42,
+43,
+44,
+46,
+48,
+49,
+50,
+51,
+52,
+53,
+54,
+55,
+56,
+60,
+61,
+62,
+63,
+64,
+65,
+66,
+67,
+68,
+70,
+75,
+76,
+77,
+84,
+85,
+87,
+88,
+89,
+90,
+91,
+92,
+93,
+94,
+95,
+100,
+102,
+103,
+104,
+106,
+108,
+109,
+110,
+115,
+117,
+118,
+119,
+121,
+127,
+129,
+130,
+131,
+135,
+136,
+137,
+138,
+139,
+140,
+142,
+145,
+147,
+148,
+149,
+153,
+154,
+155,
+158,
+160,
+162,
+163,
+164,
+165,
+166,
+167,
+174,
+175,
+176,
+177,
+178,
+179,
+184,
+188,
+192,
+193,
+195,
+196,
+197]
+
+
+
+a,b = 6, 7
 
 
 # If neither the source nor target are specified return a dictionary 
@@ -174,8 +295,9 @@ def get_sol(g, path, conq):
         g.nodes()[e]['weight'] = float(g.nodes()[e]['weight'])
     return cost_of_solution(g, path, conq)
 
-# for name in [str(i) for i in range(100)]:
+
 for name in [str(i) for i in range(a,b)]:
+# for name in [str(i) for i in notrun]:
     try: 
         print(name)
         g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
@@ -188,4 +310,5 @@ for name in [str(i) for i in range(a,b)]:
 
         # print(get_sol(g, t, conq))
     except Exception as e:
-        write_to_file("errorlog.txt", str(e) + "\n" + str(name))
+        print(e)
+        write_to_file("errorlog.txt", str(e) + "\n" + str(name), 1)
