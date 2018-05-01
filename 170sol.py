@@ -174,18 +174,18 @@ def get_sol(g, path, conq):
     return cost_of_solution(g, path, conq)
 
 # for name in [str(i) for i in range(100)]:
-for name in [str(i) for i in range(0,50)] 
-try: 
-    if not (int(name) % 10):
-        print(name)
-    g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
-    t = build_tour(g, source)
-    clist = generate_conquering(g,t)
-    conq = set([i for i in clist.keys() if clist[i]])
+for name in [str(i) for i in range(0,50)]:
+    try: 
+        if not (int(name) % 10):
+            print(name)
+        g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
+        t = build_tour(g, source)
+        clist = generate_conquering(g,t)
+        conq = set([i for i in clist.keys() if clist[i]])
 
-    file = "outputs2/" + name  + ".out"
-    output_to_file(file, t, list(conq))
+        file = "outputs2/" + name  + ".out"
+        output_to_file(file, t, list(conq))
 
-    # print(get_sol(g, t, conq))
-except Exception as e:
-    print(e)
+        # print(get_sol(g, t, conq))
+    except Exception as e:
+        print(e)
