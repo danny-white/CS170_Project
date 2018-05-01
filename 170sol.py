@@ -7,20 +7,15 @@ from source.local_utils import *
 from source.utils import *
 import os.path
 
-# import Christofides
-import os.path
+
 for name in [str(i) for i in range(1000)]:
     if not os.path.exists("outputs/" + name + ".out"):
         print("\'" + name + "\'," , end = " ")
 
 
-exit()
-
-
-
-
 
 a,b = 550, 600
+
 
 
 # If neither the source nor target are specified return a dictionary 
@@ -189,7 +184,6 @@ def get_sol(g, path, conq):
 
 
 for name in [str(i) for i in range(a,b)]:
-# for name in [str(i) for i in notrun]:
     try: 
         print(name)
         g, conquer_costs, source = graph_from_file("inputs2/" + name + ".in")
@@ -202,5 +196,9 @@ for name in [str(i) for i in range(a,b)]:
 
         # print(get_sol(g, t, conq))
     except Exception as e:
+
+        write_to_file("errorlog.txt", str(e) + "\n" + str(name))
+
+
         print(e)
-        write_to_file("errorlog.txt", str(e) + "\n" + str(name), 1)
+        
