@@ -14,4 +14,99 @@ STREAM ioctl timeout
 652STREAM ioctl timeout
 715The node 1                                                  is not in the graph.
 717STREAM ioctl timeout
-655
+655STREAM ioctl timeout
+664STREAM ioctl timeout
+604STREAM ioctl timeout
+43STREAM ioctl timeout
+607STREAM ioctl timeout
+46STREAM ioctl timeout
+667STREAM ioctl timeout
+724STREAM ioctl timeout
+727unsupported operand type(s) for +: 'int' and 'str'
+673unsupported operand type(s) for +: 'int' and 'str'
+674STREAM ioctl timeout
+679The node kingdom2  is not in the graph.
+681The node kingdom28  is not in the graph.
+682The node kingdom29  is not in the graph.
+683STREAM ioctl timeout
+685STREAM ioctl timeout
+733STREAM ioctl timeout
+688The node  I is not in the graph.
+690('Adjacency matrix is not square.', 'nx,ny=(1, 19)')
+691('Adjacency matrix is not square.', 'nx,ny=(1, 23)')
+692STREAM ioctl timeout
+613STREAM ioctl timeout
+742('Adjacency matrix is not square.', 'nx,ny=(1, 37)')
+744list index out of range
+745list index out of range
+746STREAM ioctl timeout
+694[Errno 2] No such file or directory: 'inputs2/696.in'
+696[Errno 2] No such file or directory: 'inputs2/697.in'
+697[Errno 2] No such file or directory: 'inputs2/698.in'
+698STREAM ioctl timeout
+619STREAM ioctl timeout
+61The node 0  is not in the graph.
+63The node 0  is not in the graph.
+64The node 0  is not in the graph.
+65STREAM ioctl timeout
+76STREAM ioctl timeout
+751[Errno 2] No such file or directory: 'inputs2/753.in'
+753[Errno 2] No such file or directory: 'inputs2/754.in'
+754[Errno 2] No such file or directory: 'inputs2/755.in'
+755[Errno 2] No such file or directory: 'inputs2/756.in'
+756[Errno 2] No such file or directory: 'inputs2/757.in'
+757[Errno 2] No such file or directory: 'inputs2/758.in'
+758[Errno 2] No such file or directory: 'inputs2/759.in'
+759[Errno 2] No such file or directory: 'inputs2/760.in'
+760[Errno 2] No such file or directory: 'inputs2/761.in'
+761[Errno 2] No such file or directory: 'inputs2/762.in'
+762[Errno 2] No such file or directory: 'inputs2/763.in'
+763[Errno 2] No such file or directory: 'inputs2/764.in'
+764[Errno 2] No such file or directory: 'inputs2/765.in'
+765[Errno 2] No such file or directory: 'inputs2/766.in'
+766[Errno 2] No such file or directory: 'inputs2/767.in'
+767[Errno 2] No such file or directory: 'inputs2/768.in'
+768[Errno 2] No such file or directory: 'inputs2/769.in'
+769[Errno 2] No such file or directory: 'inputs2/770.in'
+770[Errno 2] No such file or directory: 'inputs2/771.in'
+771[Errno 2] No such file or directory: 'inputs2/772.in'
+772[Errno 2] No such file or directory: 'inputs2/773.in'
+773[Errno 2] No such file or directory: 'inputs2/774.in'
+774[Errno 2] No such file or directory: 'inputs2/775.in'
+775[Errno 2] No such file or directory: 'inputs2/776.in'
+776[Errno 2] No such file or directory: 'inputs2/777.in'
+777[Errno 2] No such file or directory: 'inputs2/778.in'
+778[Errno 2] No such file or directory: 'inputs2/779.in'
+779[Errno 2] No such file or directory: 'inputs2/780.in'
+780[Errno 2] No such file or directory: 'inputs2/781.in'
+781[Errno 2] No such file or directory: 'inputs2/782.in'
+782[Errno 2] No such file or directory: 'inputs2/783.in'
+783[Errno 2] No such file or directory: 'inputs2/784.in'
+784[Errno 2] No such file or directory: 'inputs2/785.in'
+785[Errno 2] No such file or directory: 'inputs2/786.in'
+786[Errno 2] No such file or directory: 'inputs2/787.in'
+787[Errno 2] No such file or directory: 'inputs2/788.in'
+788[Errno 2] No such file or directory: 'inputs2/789.in'
+789[Errno 2] No such file or directory: 'inputs2/790.in'
+790[Errno 2] No such file or directory: 'inputs2/791.in'
+791[Errno 2] No such file or directory: 'inputs2/792.in'
+792[Errno 2] No such file or directory: 'inputs2/793.in'
+793[Errno 2] No such file or directory: 'inputs2/794.in'
+794[Errno 2] No such file or directory: 'inputs2/795.in'
+795[Errno 2] No such file or directory: 'inputs2/796.in'
+796[Errno 2] No such file or directory: 'inputs2/797.in'
+797[Errno 2] No such file or directory: 'inputs2/798.in'
+798[Errno 2] No such file or directory: 'inputs2/799.in'
+799STREAM ioctl timeout
+631STREAM ioctl timeout
+85STREAM ioctl timeout
+550('Adjacency matrix is not square.', 'nx,ny=(1, 100)')
+552('Adjacency matrix is not square.', 'nx,ny=(1, 200)')
+553('Adjacency matrix is not square.', 'nx,ny=(1, 50)')
+554STREAM ioctl timeout
+634STREAM ioctl timeout
+88The node 88  is not in the graph.
+642The node 2  is not in the graph.
+643The node 33  is not in the graph.
+644STREAM ioctl timeout
+646

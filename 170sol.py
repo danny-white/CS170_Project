@@ -9,18 +9,18 @@ import os.path
 
 # import Christofides
 import os.path
-for name in [str(i) for i in range(200)]:
-    if not os.path.exists("outputs2/" + name + ".out"):
+for name in [str(i) for i in range(1000)]:
+    if not os.path.exists("outputs/" + name + ".out"):
         print("\'" + name + "\'," , end = " ")
 
 
+exit()
 
 
 
 
 
-
-a,b =700, 800
+a,b = 550, 600
 
 
 # If neither the source nor target are specified return a dictionary 
