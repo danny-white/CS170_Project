@@ -5,20 +5,32 @@ import numpy as np
 from source.student_utils_sp18 import *
 from source.local_utils import *
 from source.utils import *
-import os.path
-
+import os.path, sys
 
 # for name in [str(i) for i in range(753)]:
-#     if not os.path.exists("outputs/" + name + ".out"):
-#         print("\'" + name + "\'," , end = " ")
+#             if not os.path.exists("inputs/" + name + ".in"):
+#                 print(str(name))
+
+absent = [str(i) for i in [102,103,104,210,211,212,249,250,310,375,376,377,521,696,697,698,705,706,707,711,712,713]]
+notrun = []
+try: 
+    if sys.argv[1] == "-b":
+        for name in [str(i) for i in range(753)]:
+            if not os.path.exists("outputs/" + name + ".out"):
+                notrun.append(str(name))
+        print(notrun)
+    exit()
+except:
+    pass
 
 
 
-notrun = ['25', '31', '37', '43', '63', '64', '65', '91', '94', '100', '102', '103', '104', '109', '115', '127', '136', '137', '138', '139', '140', '163', '165', '166', '167', '175', '187', '192', '193', '196', '201', '203', '210', '211', '212', '214', '221', '223', '247', '249', '250', '256', '283', '292', '310', '313', '375', '376', '377', '388', '394', '413', '447', '448', '449', '460', '466', '471', '472', '473', '481', '484', '510', '511', '512', '517', '521', '530', '552', '553', '554', '592', '601', '642', '643', '644', '673', '674', '679', '681', '682', '683', '685', '688', '690', '691', '692', '696', '697', '698', '703', '705', '706', '707', '711', '712', '713', '717', '742', '744', '745', '746', '748']
-print(len(notrun))
+
+print(len(notrun) - len(absent))
 exit()
 
-a,b = input("input the beginning of your range (inclusive)"), input("input the end of your range (exclusive)")
+if not notrun: 
+    a,b = input("input the beginning of your range (inclusive)"), input("input the end of your range (exclusive)")
 
 
 
@@ -188,7 +200,8 @@ def get_sol(g, path, conq):
 
 
 # for name in [str(i) for i in range(int(a),int(b))]:
-for name in notrun[::-1]:
+r = int(len(notrun)/2)
+for name in notrun[:r]:
     try:
         print(name)
         g, conquer_costs, source = graph_from_file("inputs/" + name + ".in")
@@ -202,5 +215,5 @@ for name in notrun[::-1]:
         file = "outputs2/" + name  + ".out"
         output_to_file(file, t, list(conq))
     except Exception as e:
-        write_to_file("errorlog.txt", str(e) + "\n" + str(name), True)
+        write_to_file("errorlog.txt", "failed input: " + str(name) + ", error: " + str(e) + "\n", True)
         

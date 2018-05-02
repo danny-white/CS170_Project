@@ -1,4 +1,5 @@
 import networkx as nx
+import re
 import matplotlib.pyplot as plt
 import random, time
 import numpy as np
@@ -20,6 +21,7 @@ def graph_from_file(infile):
     mat = []
 
     for line in lines[3:]:
+        line = re.sub(" +", " ", line)
         mat += [line.replace("\t"," ").strip().split(" ")]
 
     g = adjacency_matrix_to_graph(mat)
