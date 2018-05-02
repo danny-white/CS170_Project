@@ -1,0 +1,196 @@
+
+STREAM ioctl timeout
+748list index out of range
+746list index out of range
+745('Adjacency matrix is not square.', 'nx,ny=(1, 37)')
+744STREAM ioctl timeout
+742STREAM ioctl timeout
+25STREAM ioctl timeout
+31STREAM ioctl timeout
+37STREAM ioctl timeout
+43The node 1                                                  is not in the graph.
+717[Errno 2] No such file or directory: 'inputs/713.in'
+713[Errno 2] No such file or directory: 'inputs/712.in'
+712[Errno 2] No such file or directory: 'inputs/711.in'
+711[Errno 2] No such file or directory: 'inputs/707.in'
+707[Errno 2] No such file or directory: 'inputs/706.in'
+706[Errno 2] No such file or directory: 'inputs/705.in'
+705The node 0  is not in the graph.
+703[Errno 2] No such file or directory: 'inputs/698.in'
+698[Errno 2] No such file or directory: 'inputs/697.in'
+697[Errno 2] No such file or directory: 'inputs/696.in'
+696('Adjacency matrix is not square.', 'nx,ny=(1, 23)')
+692('Adjacency matrix is not square.', 'nx,ny=(1, 19)')
+691The node  I is not in the graph.
+690STREAM ioctl timeout
+688STREAM ioctl timeout
+685The node kingdom29  is not in the graph.
+683The node kingdom28  is not in the graph.
+682The node kingdom2  is not in the graph.
+681The node 0  is not in the graph.
+63The node 0  is not in the graph.
+64The node 0  is not in the graph.
+65STREAM ioctl timeout
+679unsupported operand type(s) for +: 'int' and 'str'
+674unsupported operand type(s) for +: 'int' and 'str'
+673STREAM ioctl timeout
+91The node ThorinRowle  is not in the graph.
+94STREAM ioctl timeout
+100[Errno 2] No such file or directory: 'inputs/102.in'
+102[Errno 2] No such file or directory: 'inputs/103.in'
+103[Errno 2] No such file or directory: 'inputs/104.in'
+104STREAM ioctl timeout
+646The node 33  is not in the graph.
+644The node 2  is not in the graph.
+643The node 88  is not in the graph.
+642STREAM ioctl timeout
+634STREAM ioctl timeout
+109STREAM ioctl timeout
+115STREAM ioctl timeout
+127STREAM ioctl timeout
+136The node S  is not in the graph.
+137min() arg is an empty sequence
+138min() arg is an empty sequence
+139min() arg is an empty sequence
+140STREAM ioctl timeout
+145STREAM ioctl timeout
+601('Adjacency matrix is not square.', 'nx,ny=(1, 199)')
+592('Adjacency matrix is not square.', 'nx,ny=(1, 50)')
+554('Adjacency matrix is not square.', 'nx,ny=(1, 200)')
+553('Adjacency matrix is not square.', 'nx,ny=(1, 100)')
+552('Adjacency matrix is not square.', 'nx,ny=(1, 50)')
+530[Errno 2] No such file or directory: 'inputs/521.in'
+521STREAM ioctl timeout
+517The node YB  is not in the graph.
+512The node SH  is not in the graph.
+511The node WD  is not in the graph.
+510STREAM ioctl timeout
+163The node A1  is not in the graph.
+165The node A1  is not in the graph.
+166The node A  is not in the graph.
+167STREAM ioctl timeout
+484STREAM ioctl timeout
+175STREAM ioctl timeout
+481unsupported operand type(s) for +: 'int' and 'str'
+473unsupported operand type(s) for +: 'int' and 'str'
+472unsupported operand type(s) for +: 'int' and 'str'
+471STREAM ioctl timeout
+187('Adjacency matrix is not square.', 'nx,ny=(1, 100)')
+192('Adjacency matrix is not square.', 'nx,ny=(1, 200)')
+193min() arg is an empty sequence
+196The node 0                                                                                                 is not in the graph.
+201The node 0                                                 is not in the graph.
+203STREAM ioctl timeout
+466STREAM ioctl timeout
+205[Errno 2] No such file or directory: 'inputs/210.in'
+210[Errno 2] No such file or directory: 'inputs/211.in'
+211[Errno 2] No such file or directory: 'inputs/212.in'
+212STREAM ioctl timeout
+460STREAM ioctl timeout
+214('Adjacency matrix is not square.', 'nx,ny=(1, 21)')
+221STREAM ioctl timeout
+454The node 0  is not in the graph.
+449The node 0  is not in the graph.
+448The node 0  is not in the graph.
+447STREAM ioctl timeout
+223STREAM ioctl timeout
+433STREAM ioctl timeout
+427('Adjacency matrix is not square.', 'nx,ny=(1, 50)')
+413STREAM ioctl timeout
+394STREAM ioctl timeout
+388STREAM ioctl timeout
+247[Errno 2] No such file or directory: 'inputs/249.in'
+249[Errno 2] No such file or directory: 'inputs/250.in'
+250[Errno 2] No such file or directory: 'inputs/377.in'
+377[Errno 2] No such file or directory: 'inputs/376.in'
+376[Errno 2] No such file or directory: 'inputs/375.in'
+375STREAM ioctl timeout
+256STREAM ioctl timeout
+283STREAM ioctl timeout
+286The node C3              is not in the graph.
+292STREAM ioctl timeout
+340STREAM ioctl timeout
+301STREAM ioctl timeout
+313[Errno 2] No such file or directory: 'inputs/310.in'
+310STREAM ioctl timeout
+307[Errno 2] No such file or directory: 'inputs/310.in'
+310STREAM ioctl timeout
+313STREAM ioctl timeout
+349STREAM ioctl timeout
+352STREAM ioctl timeout
+361The node C3              is not in the graph.
+292STREAM ioctl timeout
+370STREAM ioctl timeout
+373[Errno 2] No such file or directory: 'inputs/375.in'
+375[Errno 2] No such file or directory: 'inputs/376.in'
+376[Errno 2] No such file or directory: 'inputs/377.in'
+377STREAM ioctl timeout
+283STREAM ioctl timeout
+385STREAM ioctl timeout
+388STREAM ioctl timeout
+394('Adjacency matrix is not square.', 'nx,ny=(1, 50)')
+413STREAM ioctl timeout
+256STREAM ioctl timeout
+253[Errno 2] No such file or directory: 'inputs/250.in'
+250[Errno 2] No such file or directory: 'inputs/249.in'
+249STREAM ioctl timeout
+247The node 0  is not in the graph.
+447The node 0  is not in the graph.
+448The node 0  is not in the graph.
+449STREAM ioctl timeout
+460STREAM ioctl timeout
+223('Adjacency matrix is not square.', 'nx,ny=(1, 21)')
+221STREAM ioctl timeout
+466unsupported operand type(s) for +: 'int' and 'str'
+471unsupported operand type(s) for +: 'int' and 'str'
+472unsupported operand type(s) for +: 'int' and 'str'
+473STREAM ioctl timeout
+214[Errno 2] No such file or directory: 'inputs/212.in'
+212[Errno 2] No such file or directory: 'inputs/211.in'
+211[Errno 2] No such file or directory: 'inputs/210.in'
+210STREAM ioctl timeout
+478STREAM ioctl timeout
+481The node 0                                                 is not in the graph.
+203The node 0                                                                                                 is not in the graph.
+201min() arg is an empty sequence
+196('Adjacency matrix is not square.', 'nx,ny=(1, 200)')
+193('Adjacency matrix is not square.', 'nx,ny=(1, 100)')
+192STREAM ioctl timeout
+484The node WD  is not in the graph.
+510The node SH  is not in the graph.
+511The node YB  is not in the graph.
+512STREAM ioctl timeout
+187STREAM ioctl timeout
+517[Errno 2] No such file or directory: 'inputs/521.in'
+521('Adjacency matrix is not square.', 'nx,ny=(1, 50)')
+530('Adjacency matrix is not square.', 'nx,ny=(1, 100)')
+552('Adjacency matrix is not square.', 'nx,ny=(1, 200)')
+553('Adjacency matrix is not square.', 'nx,ny=(1, 50)')
+554STREAM ioctl timeout
+178('Adjacency matrix is not square.', 'nx,ny=(1, 199)')
+592STREAM ioctl timeout
+175The node A  is not in the graph.
+167The node A1  is not in the graph.
+166The node A1  is not in the graph.
+165STREAM ioctl timeout
+601STREAM ioctl timeout
+163STREAM ioctl timeout
+604STREAM ioctl timeout
+607min() arg is an empty sequence
+140min() arg is an empty sequence
+139min() arg is an empty sequence
+138The node S  is not in the graph.
+137STREAM ioctl timeout
+631The node 88  is not in the graph.
+642The node 2  is not in the graph.
+643The node 33  is not in the graph.
+644STREAM ioctl timeout
+664STREAM ioctl timeout
+667unsupported operand type(s) for +: 'int' and 'str'
+673unsupported operand type(s) for +: 'int' and 'str'
+674STREAM ioctl timeout
+679The node kingdom2  is not in the graph.
+681The node kingdom28  is not in the graph.
+682The node kingdom29  is not in the graph.
+683STREAM ioctl timeout
+685

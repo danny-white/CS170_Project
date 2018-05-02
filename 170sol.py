@@ -8,12 +8,16 @@ from source.utils import *
 import os.path
 
 
-# for name in [str(i) for i in range(1000)]:
+# for name in [str(i) for i in range(753)]:
 #     if not os.path.exists("outputs/" + name + ".out"):
 #         print("\'" + name + "\'," , end = " ")
 
 
-# exit()
+
+notrun = ['25', '31', '37', '43', '63', '64', '65', '91', '94', '100', '102', '103', '104', '109', '115', '127', '136', '137', '138', '139', '140', '163', '165', '166', '167', '175', '187', '192', '193', '196', '201', '203', '210', '211', '212', '214', '221', '223', '247', '249', '250', '256', '283', '292', '310', '313', '375', '376', '377', '388', '394', '413', '447', '448', '449', '460', '466', '471', '472', '473', '481', '484', '510', '511', '512', '517', '521', '530', '552', '553', '554', '592', '601', '642', '643', '644', '673', '674', '679', '681', '682', '683', '685', '688', '690', '691', '692', '696', '697', '698', '703', '705', '706', '707', '711', '712', '713', '717', '742', '744', '745', '746', '748']
+print(len(notrun))
+exit()
+
 a,b = input("input the beginning of your range (inclusive)"), input("input the end of your range (exclusive)")
 
 
@@ -40,7 +44,7 @@ def make_path(nodes):
 def has_leaves(g, node):
     # true if any surrounding nodes are leaves
     return any([1 if len(list(nx.neighbors(g,i))) == 1 else 0 for i in nx.neighbors(g,node)])
-@timeout(30)
+@timeout(60)
 def build_tour(g, start):
     start_leaf = -1
     if len(set(g.neighbors(start))) == 1:
@@ -141,7 +145,7 @@ def build_tour(g, start):
 
     # now short_paths is the complete graph, we thus take the smallest edge in it, 
     # verify it doesnt break the 2 vertex / cycle thing and repeat
-@timeout(10)
+@timeout(60)
 def generate_conquering(g, walk):
     conquered = dict(zip(list(g.nodes), [0 for i in g.nodes()]))
     followers = dict(zip(list(g.nodes), [0 for i in g.nodes()]))
@@ -183,7 +187,8 @@ def get_sol(g, path, conq):
     return cost_of_solution(g, path, conq)
 
 
-for name in [str(i) for i in range(int(a),int(b))]:
+# for name in [str(i) for i in range(int(a),int(b))]:
+for name in notrun[::-1]:
     try:
         print(name)
         g, conquer_costs, source = graph_from_file("inputs/" + name + ".in")
