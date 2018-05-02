@@ -13,21 +13,17 @@ import os.path, sys
 
 absent = [str(i) for i in [102,103,104,210,211,212,249,250,310,375,376,377,521,696,697,698,705,706,707,711,712,713]]
 notrun = []
-try: 
+if len(sys.argv) > 1:
     if sys.argv[1] == "-b":
         for name in [str(i) for i in range(753)]:
             if not os.path.exists("outputs/" + name + ".out"):
                 notrun.append(str(name))
         print(notrun)
-    exit()
-except:
-    pass
+        exit()
 
+ntrun = ['31', '63', '64', '65', '94', '100', '102', '103', '104', '137', '138', '139', '140', '163', '165', '166', '167', '175', '187', '196', '201', '203', '210', '211', '212', '214', '221', '249', '250', '256', '283', '292', '310', '313', '375', '376', '377', '388', '413', '447', '448', '449', '460', '471', '472', '473', '484', '510', '511', '512', '521', '642', '643', '644', '673', '674', '679', '681', '682', '683', '685', '688', '690', '692', '696', '697', '698', '703', '705', '706', '707', '711', '712', '713', '717', '745', '746', '748']
 
-
-
-print(len(notrun) - len(absent))
-exit()
+notrun = [i for i in ntrun if i not in absent]
 
 if not notrun: 
     a,b = input("input the beginning of your range (inclusive)"), input("input the end of your range (exclusive)")
@@ -201,7 +197,7 @@ def get_sol(g, path, conq):
 
 # for name in [str(i) for i in range(int(a),int(b))]:
 r = int(len(notrun)/2)
-for name in notrun[:r]:
+for name in notrun[r:]:
     try:
         print(name)
         g, conquer_costs, source = graph_from_file("inputs/" + name + ".in")
